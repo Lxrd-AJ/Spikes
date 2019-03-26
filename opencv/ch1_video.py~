@@ -1,0 +1,5 @@
+import cv2
+
+videoCapture = cv2.VideoCapture("space.mp4")
+fps = videoCapture.get( cv2.CV_CAP_PROP_FPS )
+print(fps)

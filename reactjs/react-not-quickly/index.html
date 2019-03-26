@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="theme-color" content="#000000">
+		<!--
+		manifest.json provides metadata used when your web app is added to the
+		homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+		-->
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+		<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+		<script src="node_modules/react/umd/react.development.js"></script>
+		<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+		<!-- <script src="./script.js"></script> -->
+		<title>React App</title>
+	</head>
+	<body>
+		<noscript>
+			You need to enable JavaScript to run this app.
+		</noscript>
+		<div id="root"></div>
+		<div id="content"></div>
+		
+		<script type="text/javascript">
+			// var h1 = React.createElement('h1',null,'Hello World');
+			// ReactDOM.render(h1,document.getElementById("root"));
+
+			let h1 = React.createElement('h1',null,'Hello World');
+			class HelloWorld extends React.Component {
+				render(){
+					return React.createElement('div', null, h1, h1);
+				}
+			}
+
+			let _h1 = React.createElement(HelloWorld, {
+				id: 'ember', frameworkName: "Ember.js", title="A framework for creating ambitious web applications"
+			});
+			let _h2 = React.createElement(HelloWorld, {
+				id: 'backbone', frameworkName: "Backbone.js", title="Backbone.js gives structure to web applications"
+			});
+			let _h3 = React.createElement(HelloWorld, {
+				id: 'angular', frameworkName: 'Angular.js', title="Superheroic Javascript MVQW framework"
+			});
+
+			let main
+			ReactDOM.render(hElem, document.getElementById("content"));
+		</script>
+	</body>
+</html>

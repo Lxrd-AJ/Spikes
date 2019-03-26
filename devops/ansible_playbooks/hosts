@@ -1,0 +1,10 @@
+homeboy ansible_host=192.168.1.175
+
+[gcp_webservers]
+gcp_ansible ansible_host=35.197.229.209 ansible_user=solid_aj ansible_ssh_private_key_file=~/.ssh/google_compute_engine
+gcp_ansible_2 ansible_host=35.242.182.89 ansible_user=solid_aj ansible_ssh_private_key_file=~/.ssh/google_compute_engine
+
+[vagrants]
+vagrant1 ansible_host=127.0.0.1 ansible_port=2222
+vagrant2 ansible_host=127.0.0.1 ansible_port=2200
+vagrant3 ansible_host=127.0.0.1 ansible_port=2201
